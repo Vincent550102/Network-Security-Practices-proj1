@@ -1,0 +1,32 @@
+Sentinel Scan Report
+====================
+Generated: 2026-06-04T04:51:33+08:00
+Target: samples
+Signature DB: signatures.json
+Duration: 0.001046 seconds
+
+Summary
+-------
+Scanned files: 3
+Clean files: 1
+Infected files: 1
+Suspicious files: 1
+Skipped files: 0
+Errors: 0
+
+Findings
+--------
+[INFECTED] samples/nested/deep/eicar.com (high, heuristic score 0)
+  - sha256: EICAR-Test-File-Sample-With-Newline (high)
+    detail: 131f95c51cc819465fa1797f6ccacf9d494aaaff46fa3eac73ae63ffbdfd8267
+  - md5: EICAR-Test-File-Sample-With-Newline (high)
+    detail: 69630e4574ec6798239b091cda43dca0
+  - pattern: EICAR ASCII Test Pattern (high)
+    detail: 58354f2150254041505b345c505a58353428505e2937434329377d2445494341522d5354414e444152442d414e544956495255532d544553542d46494c452124482b482a
+[SUSPICIOUS] samples/suspicious/api_notes.txt (high, heuristic score 8)
+  - heuristic: Process injection API: CreateRemoteThread (high, score 3)
+    detail: CreateRemoteThread
+  - heuristic: Process memory API: WriteProcessMemory (high, score 3)
+    detail: WriteProcessMemory
+  - heuristic: Executable memory API: VirtualAlloc (medium, score 2)
+    detail: VirtualAlloc

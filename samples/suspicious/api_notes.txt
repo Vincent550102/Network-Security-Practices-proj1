@@ -1,0 +1,5 @@
+This harmless mock file contains suspicious Windows API names for heuristic testing.
+
+VirtualAlloc
+WriteProcessMemory
+CreateRemoteThread
